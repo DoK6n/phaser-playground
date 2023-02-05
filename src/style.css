@@ -1,0 +1,27 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --background: #2c2c2c;
+  --color: #fff;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--background);
+  color: var(--color);
+}
+
+body[data-theme='dark'] {
+  --background: #2c2c2c;
+  --color: #fff;
+}
+
+body[data-theme='light'] {
+  --background: #fff;
+  --color: black;
+}
