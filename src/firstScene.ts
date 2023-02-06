@@ -1,9 +1,4 @@
-
 import Phaser from 'phaser';
-
-const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
-  key: 'firstScene',
-};
 
 export class FirstScene extends Phaser.Scene {
   private gameOver!: boolean;
@@ -20,7 +15,7 @@ export class FirstScene extends Phaser.Scene {
   };
 
   constructor() {
-    super(sceneConfig);
+    super({ key: 'firstScene' });
   }
 
   init() {
