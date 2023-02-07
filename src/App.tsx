@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { Box, Container } from '@chakra-ui/react';
+import Navbar from './components/Navbar';
 import { gameConfig, GameInstance } from './game/gameInstance';
 
 function App() {
@@ -11,15 +13,18 @@ function App() {
   }, []);
 
   return (
-    <div
-      id='game-container'
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        maxHeight: '600px',
-        maxWidth: '800px',
-      }}
-    />
+    <>
+      <Navbar />
+      <Box as='main' padding={4} paddingTop={14}>
+        <Container
+          id='game-container'
+          display='flex'
+          flexDirection='column'
+          maxHeight='600px'
+          maxWidth='800px'
+        />
+      </Box>
+    </>
   );
 }
 
